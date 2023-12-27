@@ -1,10 +1,13 @@
 import AnnouncementBar from "@/components/AnnouncementBar";
-import Image from "next/image";
+import Header from "@/components/Header";
+import { client } from "@/utils/sanity/client";
+import { groq } from "next-sanity";
 
-export default function Home() {
+export default async function Home() {
   return (
     <main>
-      <AnnouncementBar />
+      <AnnouncementBar test={"data2"} fetchedAnnouncements={"data"} />
+      <Header />
     </main>
   );
 }
