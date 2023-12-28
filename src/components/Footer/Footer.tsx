@@ -22,7 +22,11 @@ const Footer = (props: Props) => {
               placeholder="you@email.com"
             />
           </div>
-          <button className="px-8 py-4 font-semibold  border rounded-lg focus:border focus:border-red-500">
+          <button
+            type="submit"
+            onClick={(e) => e.preventDefault()}
+            className="px-8 py-4 font-semibold  border rounded-lg focus:border focus:border-brandBlue"
+          >
             Sign up
           </button>
         </form>

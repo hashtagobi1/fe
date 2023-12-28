@@ -4,7 +4,7 @@ type Props = {};
 
 const Mission = (props: Props) => {
   return (
-    <div className="bg-gradient-to-r from-brandPurple from-70%% to-brandBlue text-4xl border border-red-500 text-white px-6 py-12">
+    <div className="bg-gradient-to-r from-brandPurple from-70%% to-brandBlue text-4xl  text-white px-6 py-12">
       <p className="font-bold">
         Our Mission is to <span className="opacity-50">See Better.</span>
       </p>
