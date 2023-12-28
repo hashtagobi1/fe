@@ -141,30 +141,27 @@ const FooterLanguage = (props: Props) => {
               <div className="flex w-full justify-between">
                 <h1 className="text-2xl font-bold">Select your location</h1>
                 <div className="cursor-pointer" onClick={() => setOpen(false)}>
-                  <XMark />
+                  <XMark size={34} />
                 </div>
               </div>
 
-              <form className="mt-6">
-                <div>
-                  <select
-                    className="bg-gray-100 w-full rounded-full p-4 "
-                    onChange={(e) => handleSelectChange(e)}
-                    value={selectedCountry}
-                  >
-                    {getCountryDataList().map((country) => {
-                      const cc = getCountryCode(country.name);
-                      const emoji = cc ? getEmojiFlag(cc) : "";
-                      return (
-                        <option className="" key={country.name}>
-                          {country.name}
-                          {/* {emoji} */}
-                          <RightArrow />
-                        </option>
-                      );
-                    })}
-                  </select>
-                </div>
+              <div className="mt-6">
+                <select
+                  className="bg-gray-100 w-full rounded-full p-4 "
+                  onChange={(e) => handleSelectChange(e)}
+                  value={selectedCountry}
+                >
+                  {getCountryDataList().map((country) => {
+                    const cc = getCountryCode(country.name);
+                    const emoji = cc ? getEmojiFlag(cc) : "";
+                    return (
+                      <option className="" key={country.name}>
+                        {country.name}
+                        <RightArrow />
+                      </option>
+                    );
+                  })}
+                </select>
 
                 <div className="flex p-4 mt-6 font-light">
                   <button
@@ -181,7 +178,7 @@ const FooterLanguage = (props: Props) => {
                     Cancel
                   </button>
                 </div>
-              </form>
+              </div>
             </motion.div>
           </div>
         </AnimatePresence>

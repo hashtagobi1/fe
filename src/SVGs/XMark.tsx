@@ -1,8 +1,10 @@
-import React from 'react'
+import React from "react";
 
-type Props = {}
+type Props = {
+  size: number;
+};
 
-const XMark = (props: Props) => {
+const XMark = ({ size }: Props) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -10,8 +12,8 @@ const XMark = (props: Props) => {
       viewBox="0 0 24 24"
       strokeWidth={1.5}
       stroke="currentColor"
-      width={34}
-      height={34}
+      width={size}
+      height={size}
     >
       <path
         strokeLinecap="round"
@@ -20,6 +22,6 @@ const XMark = (props: Props) => {
       />
     </svg>
   );
-}
+};
 
-export default XMark
+export default XMark;

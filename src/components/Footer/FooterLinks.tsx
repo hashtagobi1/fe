@@ -20,8 +20,7 @@ const FooterLinks = ({ links, linkTitle }: Props) => {
                   <li
                     className="text-md cursor-pointer p-1 font-light mb-4 hover:opacity-30 transition-opacity duration-300"
                     key={link}
-                  >
-                    <span className="block w-full h-full absolute top-0 left-0 opacity-0 hover:opacity-30 transition-opacity duration-300 bg-white z-10"></span>
+                  > 
                     {link}
                   </li>
                 );
