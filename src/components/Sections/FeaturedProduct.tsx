@@ -7,6 +7,10 @@ type Props = {
 };
 
 const FeaturedProduct = ({ image }: Props) => {
+
+  const randomPrice = () =>{
+  return Math.floor(Math.random() * (195 - 60 + 1)) + 60;
+  }
   const renderSwatch = () => {
     return (
       <>
@@ -47,7 +51,7 @@ const FeaturedProduct = ({ image }: Props) => {
           </span>
         </div>
         <div>
-          <span className="text-lg">From CHF 90</span>
+          <span className="text-lg">From £{randomPrice()}</span>
         </div>
         <div>
           <ul className="flex wrap gap-4 w-full mt-4 ">
