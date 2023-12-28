@@ -7,7 +7,7 @@ type Props = {};
 
 const Header = (props: Props) => {
   return (
-    <div className="flex p-4 text items-center justify-between  border-8 border-red-900">
+    <div className="flex p-3 text items-center justify-between">
       <nav className={`hidden md:block`}>menu </nav>
       <div className={`md:hidden`}>{<MobileMenu />} </div>
       <div>

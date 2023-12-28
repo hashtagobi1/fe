@@ -4,6 +4,7 @@ import Image1 from "../../public/images/image1.avif";
 import Image2 from "../../public/images/image2.avif";
 import Image3 from "../../public/images/image3.avif";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 const Hero = () => {
   const [currentImage, setCurrentImage] = useState(0);
@@ -43,15 +44,28 @@ const Hero = () => {
     return () => clearInterval(interval);
   }, [images.length, texts.length]);
 
+  const initial = { opacity: 0 };
+  const animate = { opacity: 1 };
+  const exit = { opacity: 0 };
+  const transition = {
+    duration: 0.5,
+    ease: "easeInOut",
+  };
+
   return (
-    <div className="relative h-[80vh]">
+    <motion.div
+      initial={initial}
+      animate={animate}
+      exit={exit}
+      transition={transition}
+      className="relative h-[75vh]"
+    >
       <Image
         src={images[currentImage]}
-        // src={`./images/image${currentImage}.jpg`}
         alt={`Image ${currentImage + 1}`}
-        className="object-cover w-full h-full filter brightness-50"
+        className="object-cover w-screen h-full filter brightness-50"
       />
-      <div className="absolute top-0 left-0 w-full h-full  items-center flex m-auto px-5 ">
+      <motion.div className="absolute top-0 left-0 w-full h-full  items-center flex m-auto px-5 ">
         <div className="">
           <div className="text-white text-4xl font-bold mt-32">
             <h1>{currentText.mainText}</h1>
@@ -61,8 +75,8 @@ const Hero = () => {
             {currentText.buttonText}
           </button>
         </div>
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 };
 

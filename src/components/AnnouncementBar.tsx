@@ -10,7 +10,6 @@ const AnnouncementBar = ({ fetchedAnnouncements, test }: Props) => {
   const [announcements, setAnnouncements] = useState<string>(
     "Recieve 10% off your first order"
   );
-  console.log({ fetchedAnnouncements, test });
   useEffect(() => {
     const texts = [
       "FREE Delivery on all orders over £60/$80",
