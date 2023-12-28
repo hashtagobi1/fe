@@ -91,14 +91,15 @@ const FooterLanguage = (props: Props) => {
     // console.log(name);
     e.preventDefault();
     setSelectedCountry(name);
-    const code = e.target.value ? getCountryCode(name) : "";
+    const code = name ? getCountryCode(name) : false;
     // console.log(code);
-    const language = name
-      ? languages[getCountryData(getCountryCode(name)).languages[0]].name
-      : "";
-    const currency = name
-      ? getCountryData(getCountryCode(name)).currency[0]
-      : "";
+    const language =
+      name && code !== false
+        ? languages[getCountryData(code).languages[0]].name
+        : "";
+    const currency =
+      name && code !== false ? getCountryData(code).currency[0] : "";
+
     // console.log({ language, currency });
 
     setSelectedLanguage(language);
