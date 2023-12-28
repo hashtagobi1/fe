@@ -1,4 +1,16 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {}
+const nextConfig = {
+    images: {
+        remotePatterns: [
+            {
+                protocol: 'https',
+                hostname: 'sg360.sungod.co',
+                port: '',
+                pathname: '/**',
+
+            }
+        ]
+    }
+}
 
 module.exports = nextConfig
