@@ -1,7 +1,6 @@
 "use client";
 import { AnimatePresence, motion } from "framer-motion";
 import React, { useRef, useState } from "react";
-import { useQuery } from "react-query";
 // Interfaces and types
 import type {
   ICountry,

@@ -10,7 +10,6 @@
   },
   "dependencies": {
     "@sanity/client": "^6.10.0",
-    "@studio-freight/react-lenis": "^0.0.38",
     "countries-list": "^3.0.6",
     "framer-motion": "^10.16.16",
     "hamburger-react": "^2.5.0",
@@ -19,7 +18,6 @@
     "next-sanity": "^7.0.5",
     "react": "^18",
     "react-dom": "^18",
-    "react-query": "^3.39.3",
     "react-select": "^5.8.0",
     "react-social-icons": "^6.7.0"
   },
