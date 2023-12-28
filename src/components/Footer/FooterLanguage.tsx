@@ -21,6 +21,7 @@ import {
   getEmojiFlag,
 } from "countries-list";
 import RightArrow from "@/SVGs/RightArrow";
+import Select from "react-select";
 import XMark from "@/SVGs/XMark";
 
 type Props = {};
@@ -77,7 +78,7 @@ const FooterLanguage = (props: Props) => {
   };
 
   const backdropStyle = open
-    ? "fixed inset-0 bg-black opacity-50 z-50"
+    ? "fixed inset-0 bg-black opacity-85 z-50"
     : "hidden";
 
   const handleChange = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
@@ -105,6 +106,12 @@ const FooterLanguage = (props: Props) => {
     setSelectedCurrency(currency);
     // console.log({ Selsect: e.target.value });
   };
+
+  const countryOptions = getCountryDataList().map((country) => {
+    const cc = getCountryCode(country.name);
+    const emoji = cc ? getEmojiFlag(cc) : "";
+    return { label: country.name, value: country.name };
+  });
   return (
     <div>
       <button
@@ -146,22 +153,33 @@ const FooterLanguage = (props: Props) => {
               </div>
 
               <div className="mt-6">
-                <select
-                  className="bg-gray-100 w-full rounded-full p-4 "
-                  onChange={(e) => handleSelectChange(e)}
-                  value={selectedCountry}
-                >
-                  {getCountryDataList().map((country) => {
-                    const cc = getCountryCode(country.name);
-                    const emoji = cc ? getEmojiFlag(cc) : "";
-                    return (
-                      <option className="" key={country.name}>
-                        {country.name}
-                        <RightArrow />
-                      </option>
-                    );
-                  })}
-                </select>
+                <Select
+                  // className="bg-gray-100 w-full rounded-full p-4 "
+                  // onChange={(e) => handleSelectChange(e)}
+                  styles={{
+                    control: (baseStyles, state) => ({
+                      ...baseStyles,
+                      borderRadius: "9999px",
+                      width: "100%",
+                      padding: "1rem",
+                      backgroundColor: "#F7F7F7",
+                    }),
+                  }}
+                  value={{ label: selectedCountry, value: selectedCountry }}
+                  options={countryOptions}
+                  onChange={(option) => {
+                    setSelectedCountry(option.value);
+                    const code = getCountryCode(option.value);
+                    const language = code
+                      ? languages[getCountryData(code).languages[0]].name
+                      : "";
+                    const currency = code
+                      ? getCountryData(code).currency[0]
+                      : "";
+                    setSelectedLanguage(language);
+                    setSelectedCurrency(currency);
+                  }}
+                />
 
                 <div className="flex p-4 mt-6 font-light">
                   <button
