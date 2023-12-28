@@ -66,9 +66,9 @@ const Hero = () => {
         className="object-cover w-screen flex items-center justify-center h-full filter brightness-50"
       />
 
-      <motion.div className="absolute top-0 left-0 w-full h-full  items-center flex m-auto px-5 ">
+      <motion.div className="absolute top-0 left-0 w-full h-full md:justify-center items-center flex m-auto px-5 md:-ml-72 ">
         <div className="">
-          <div className="text-white text-4xl font-bold mt-32">
+          <div className="text-white text-4xl md:text-6xl font-bold mt-32">
             <h1>{currentText.mainText}</h1>
             <h1 className="opacity-60">{currentText.secondaryText}</h1>
           </div>
