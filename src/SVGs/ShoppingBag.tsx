@@ -10,7 +10,9 @@ const ShoppingBag = (props: Props) => {
       viewBox="0 0 24 24"
       stroke-width="1.5"
       stroke="currentColor"
-      className="w-6 h-6"
+      width={35}
+      className="cursor-pointer"
+      height={35}
     >
       <path
         stroke-linecap="round"

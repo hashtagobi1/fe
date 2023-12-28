@@ -7,14 +7,15 @@ type Props = {
 };
 
 const AnnouncementBar = ({ fetchedAnnouncements, test }: Props) => {
-  const [announcements, setAnnouncements] = useState<string>("Initial");
+  const [announcements, setAnnouncements] = useState<string>(
+    "Recieve 10% off your first order"
+  );
   console.log({ fetchedAnnouncements, test });
   useEffect(() => {
     const texts = [
-      "Free Christmas Shipping on orders over $50 🎄",
-      "test announcement 2",
-      "test announcement 3",
-      "test announcement 4",
+      "FREE Delivery on all orders over £60/$80",
+      "Christmas Delivery Dates",
+      "Over 19,000 ★★★★★ reviews",
     ];
     let currentIndex = 0;
 

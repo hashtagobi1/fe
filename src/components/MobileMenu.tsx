@@ -9,17 +9,25 @@ const MobileMenu = (props: Props) => {
 
   return (
     <>
-      <Hamburger  toggled={isOpen} toggle={setOpen} />
-      <div className="relative">
+      <div className="z-50">
+        <Hamburger toggled={isOpen} toggle={setOpen} />
+        <p className="text-white">text white</p>
+      </div>
+      <div className="">
         <div
           className={`slide-in ${
             isOpen ? "active" : " transform translate-x-0"
           } `}
         >
           {isOpen && (
-            <p className="bg-red-600 absolute w-screen h-screen overflow-hidden transition-all ease-in-out duration-300 transform -translate-x-[100%]">
-              Hi
-            </p>
+            <div className="absolute top-0 bg-red-800 duration-500 transition-all z-30 left-0 w-screen h-screen flex items-center justify-center">
+              <div className="text-black  text-4xl font-bold text-center">
+                <button className="text-white" onClick={() => setOpen(false)}>
+                  clear
+                </button>
+                Your Text Overlay
+              </div>
+            </div>
           )}
         </div>
       </div>
