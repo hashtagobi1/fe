@@ -14,19 +14,16 @@ const Footer = () => {
           <p className="text-2xl">
             The latest SunGod news, direct to your inbox.
           </p>
-          <div className="flex gap-4">
+          <form onSubmit={(e) => e.preventDefault()} className="flex gap-4">
             <input
               className="rounded-lg mt-4 p-4 bg-gray-100"
               type="text"
               placeholder="you@email.com"
             />
-            <button
-              type="submit"
-              className="px-8 py-4 font-semibold  border rounded-lg focus:border focus:border-brandBlue"
-            >
+            <button className="px-8 py-4 font-semibold  border rounded-lg focus:outline focus:border-brandBlue">
               Sign up
             </button>
-          </div>
+          </form>
         </div>
         <FooterLinks
           linkTitle="About Us"
