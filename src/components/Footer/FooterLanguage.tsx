@@ -68,13 +68,17 @@ const FooterLanguage = (props: Props) => {
     }),
   };
   const slideVariants = {
-    hidden: { x: "100%" },
-    visible: { x: 0, transition: { duration: 0.1, type: "tween" } },
+    hidden: { x: "100%", opacity: 0 },
+    visible: {
+      x: 0,
+      opacity: 1,
+      transition: { duration: 0.6, type: "tween" },
+    },
     exit: {
       x: "100%",
-      opacity: 0,
-      transition: { duration: 0.5, type: "tween" },
-    }, // Exit animation
+      opacity: 1,
+      transition: { duration: 0.3, type: "tween" },
+    },
   };
 
   const backdropStyle = open
@@ -107,20 +111,16 @@ const FooterLanguage = (props: Props) => {
           </span>
         </p>
       </button>
-      {open && (
-        <AnimatePresence>
-          <div
-            className={`${backdropStyle} text-black `}
-            // onClick={() => setOpen(false)}
-          >
+      <AnimatePresence>
+        {open && (
+          <div className={`${backdropStyle} text-black `}>
             <motion.div
               initial={"hidden"}
               animate={open ? "visible" : "hidden"}
               exit={"exit"}
               variants={slideVariants}
-              className={`  flex-col fixed opacity-100 top-0 right-0 w-4/6 h-full 
-            bg-white duration-500 
-            transition-all
+              className={`  flex-col fixed top-0 right-0 w-4/6 h-full 
+            bg-white
             flex p-8
             z-50 overflow-hidden ${open ? "block" : "hidden"}`}
               //   onClick={() => setOpen(false)}
@@ -188,8 +188,8 @@ const FooterLanguage = (props: Props) => {
               </div>
             </motion.div>
           </div>
-        </AnimatePresence>
-      )}
+        )}
+      </AnimatePresence>
     </div>
   );
 };

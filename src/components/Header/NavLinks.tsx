@@ -8,14 +8,16 @@ const NavLinks = (props: Props) => {
   const renderNavLink = (link: string) => {
     return (
       <li
-        className={`hover:opacity-50 text-2xl ${
+        className={`hover:opacity-50 text-2xl md:text-lg  md:ml-12 ${
           link === "Gift Guide"
             ? "bg-gradient-to-br from-yellow-600 from-15% to-yellow-300 text-transparent bg-clip-text"
             : ""
         } flex items-center md:text-sm duration-300 transition-all`}
       >
         {link}
-        {link === "Prescription" ? <Tag styles="ml-4" name="NEW" /> : null}
+        <span className="md:hidden">
+          {link === "Prescription" ? <Tag styles="ml-4" name="NEW" /> : null}
+        </span>
       </li>
     );
   };
@@ -33,8 +35,10 @@ const NavLinks = (props: Props) => {
         {renderNavLink("Sunglasses")}
         {renderNavLink("Prescription")}
         {renderNavLink("Goggles")}
-        {renderNavLink("Limited Edition")}
-        {renderNavLink("Shop By Sport")}
+        <div className="md:hidden">
+          {renderNavLink("Limited Edition")}
+          {renderNavLink("Shop By Sport")}
+        </div>
         {renderNavLink("Gift Guide")}
       </ol>
       <ul className="font-light mt-6 text-2xl md:hidden flex gap-8 flex-col">

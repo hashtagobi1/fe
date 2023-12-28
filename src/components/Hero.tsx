@@ -63,7 +63,7 @@ const Hero = () => {
       <Image
         src={images[currentImage]}
         alt={`Image ${currentImage + 1}`}
-        className="object-cover w-screen flex items-center justify-center h-full filter brightness-50"
+        className="object-cover w-screen flex items-center justify-center h-full filter brightness-75"
       />
 
       <motion.div className="absolute top-0 left-0 w-full h-full md:justify-center items-center flex m-auto px-5 md:-ml-72 ">

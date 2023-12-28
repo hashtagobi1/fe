@@ -31,14 +31,14 @@ const AnnouncementBar = ({ fetchedAnnouncements, test }: Props) => {
       // TODO: make this fade in and out
       <li className="justify-center items-center flex">
         <span>
-          <b className="text-white text-center font-light">{announcement}</b>
+          <b className="text-white text-center text-sm font-light">{announcement}</b>
         </span>
       </li>
     );
   };
   return (
     <div className="bg-gradient-to-r cursor-pointer from-brandPurple from-60% to-brandBlue">
-      <ul className="p-4">{renderAnnouncement(announcements)}</ul>
+      <ul className="px-4 p-1">{renderAnnouncement(announcements)}</ul>
     </div>
   );
 };
