@@ -58,13 +58,14 @@ const Hero = () => {
       animate={animate}
       exit={exit}
       transition={transition}
-      className="relative h-[75vh]"
+      className="relative h-[85vh]"
     >
       <Image
         src={images[currentImage]}
         alt={`Image ${currentImage + 1}`}
-        className="object-cover w-screen h-full filter brightness-50"
+        className="object-cover w-screen flex items-center justify-center h-full filter brightness-50"
       />
+
       <motion.div className="absolute top-0 left-0 w-full h-full  items-center flex m-auto px-5 ">
         <div className="">
           <div className="text-white text-4xl font-bold mt-32">
