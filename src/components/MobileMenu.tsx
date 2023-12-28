@@ -9,9 +9,8 @@ const MobileMenu = (props: Props) => {
 
   return (
     <>
-      <div className="z-50">
-        <Hamburger toggled={isOpen} toggle={setOpen} />
-        <p className="text-white">text white</p>
+      <div className="z-10">
+        <Hamburger size={35} toggled={isOpen} toggle={setOpen} />
       </div>
       <div className="">
         <div

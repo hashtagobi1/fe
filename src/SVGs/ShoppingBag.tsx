@@ -11,8 +11,8 @@ const ShoppingBag = (props: Props) => {
       stroke-width="1.5"
       stroke="currentColor"
       width={35}
-      className="cursor-pointer"
       height={35}
+      className="cursor-pointer"
     >
       <path
         stroke-linecap="round"

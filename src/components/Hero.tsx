@@ -9,7 +9,7 @@ const Hero = () => {
   const [currentImage, setCurrentImage] = useState(0);
   const [currentText, setCurrentText] = useState({
     mainText: "Meet Ullrs.",
-    secondaryText: "New to Snow Series",
+    secondaryText: "New to Snow Series.",
     buttonText: "Shop Now",
   });
   const images = [
@@ -21,7 +21,7 @@ const Hero = () => {
   const texts = [
     {
       mainText: "Sunglasses for Everyday.",
-      secondaryText: "Shop Lifestyle",
+      secondaryText: "Shop Lifestyle.",
       buttonText: "Shop Sunglasses",
     },
     {
@@ -53,7 +53,7 @@ const Hero = () => {
       />
       <div className="absolute top-0 left-0 w-full h-full  items-center flex m-auto px-5 ">
         <div className="">
-          <div className="text-white text-justify text-4xl font-bold mt-32">
+          <div className="text-white text-4xl font-bold mt-32">
             <h1>{currentText.mainText}</h1>
             <h1 className="opacity-60">{currentText.secondaryText}</h1>
           </div>
