@@ -86,26 +86,6 @@ const FooterLanguage = (props: Props) => {
     console.log({ e });
     setOpen(false);
   };
-  const handleSelectChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    const name = e.target.value;
-    // console.log(name);
-    e.preventDefault();
-    setSelectedCountry(name);
-    const code = name ? getCountryCode(name) : false;
-    // console.log(code);
-    const language =
-      name && code !== false
-        ? languages[getCountryData(code).languages[0]].name
-        : "";
-    const currency =
-      name && code !== false ? getCountryData(code).currency[0] : "";
-
-    // console.log({ language, currency });
-
-    setSelectedLanguage(language);
-    setSelectedCurrency(currency);
-    // console.log({ Selsect: e.target.value });
-  };
 
   const countryOptions = getCountryDataList().map((country) => {
     const cc = getCountryCode(country.name);
@@ -152,18 +132,27 @@ const FooterLanguage = (props: Props) => {
                 </div>
               </div>
 
-              <div className="mt-6">
+              <div className="mt-6 font-light">
                 <Select
-                  // className="bg-gray-100 w-full rounded-full p-4 "
-                  // onChange={(e) => handleSelectChange(e)}
                   styles={{
                     control: (baseStyles, state) => ({
                       ...baseStyles,
                       borderRadius: "9999px",
                       width: "100%",
                       padding: "1rem",
+                      fontWeight: 200,
                       backgroundColor: "#F7F7F7",
                     }),
+                    option: (baseStyles, state) => ({
+                      ...baseStyles,
+                      border: "1px solid #F7F7F7",
+                    }),
+                    // input: (baseStyles, state) => ({
+                    //   ...baseStyles,
+                    //   backgroundColor: "red",
+                    //   color: "red",
+                    //   padding: "8rem",
+                    // }),
                   }}
                   value={{ label: selectedCountry, value: selectedCountry }}
                   options={countryOptions}

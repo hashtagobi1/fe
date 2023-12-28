@@ -2,6 +2,7 @@ import React from "react";
 import Star from "@/SVGs/Star";
 import Image from "next/image";
 import Link from "next/link";
+import Tag from "../Tag";
 type Props = {
   image: string;
 };
@@ -45,9 +46,7 @@ const FeaturedProduct = ({ image }: Props) => {
       <div>
         <div className="flex items-center justify-between mb-6">
           <p className="text-2xl font-bold">Renegades &trade;</p>
-          <span className="text-sm  uppercase font-bold border py-1 px-2 rounded-lg bg-clip-text text-transparent bg-gradient-to-r from-brandPurple from-60% to to-brandBlue">
-            bestseller
-          </span>
+          <Tag name="bestseller" />
         </div>
         <div>
           {/* <span className="text-lg">From £{randomPrice()}</span> */}

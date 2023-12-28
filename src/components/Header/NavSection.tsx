@@ -5,7 +5,7 @@ type Props = {};
 
 const NavSection = (props: Props) => {
   return (
-    <div>
+    <div className="">
       <NavLinks />
     </div>
   );
