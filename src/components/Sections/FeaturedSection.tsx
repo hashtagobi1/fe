@@ -46,25 +46,27 @@ const FeaturedSection = ({ headerText, direction }: Props) => {
     console.log("Element is in view: ", isInView);
   }, [isInView]);
   return (
-    <motion.section
-      variants={opacity}
-      animate={isInView ? "open" : "closed"}
-      ref={ref}
-      className="p-5 mt-20"
-      data-scroll
-    >
-      <h2 className="text-2xl mt-10 font-semibold mb-10">{headerText}</h2>
-      <div className="mb-20">
-        <FeaturedProduct
-          image={
-            "https://sg360.sungod.co/insecure/crop:1996:1996/resize:auto:800:800/extend:1:ce/aHR0cHM6Ly9zZzM2MC1zdGFjay5zdW5nb2QuY28vP3BhdGhzPTIzMDQwNiUyRlJlbmVnYWRlcyUyRnJnZl9NYmxhY2tfMDAxLnBuZyUyQzIzMDQwNiUyRlJlbmVnYWRlcyUyRnJnaV9Cc2lsdmVyXzAwMS5wbmclMkMyMzA0MDYlMkZSZW5lZ2FkZXMlMkZyZ2xlX3Ntb2tlXzAwMS5wbmclMkMyMjA1MjAlMkZSZW5lZ2FkZXMlMkZyZ2xnJTJGcmdsZ19QXzAwMS5wbmc"
-          }
-        />
-      </div>
-      <div className="mb-20">
-        <FeaturedProduct image="https://sg360.sungod.co/insecure/crop:1996:1996/resize:auto:800:800/extend:1:ce/aHR0cHM6Ly9zZzM2MC1zdGFjay5zdW5nb2QuY28vP3BhdGhzPTIzMDUwNCUyRklORU9TJTJGVnVsY2Fuc19URl9JTkVPUyUyMEdyZW5hZGllcnNfMDAxLnBuZw" />
-      </div>
-    </motion.section>
+    <div className="overflow-hidden">
+      <motion.section
+        variants={opacity}
+        animate={isInView ? "open" : "closed"}
+        ref={ref}
+        className="p-5 mt-20 "
+        data-scroll
+      >
+        <h2 className="text-2xl mt-10 font-semibold mb-10">{headerText}</h2>
+        <div className="mb-20">
+          <FeaturedProduct
+            image={
+              "https://sg360.sungod.co/insecure/crop:1996:1996/resize:auto:800:800/extend:1:ce/aHR0cHM6Ly9zZzM2MC1zdGFjay5zdW5nb2QuY28vP3BhdGhzPTIzMDQwNiUyRlJlbmVnYWRlcyUyRnJnZl9NYmxhY2tfMDAxLnBuZyUyQzIzMDQwNiUyRlJlbmVnYWRlcyUyRnJnaV9Cc2lsdmVyXzAwMS5wbmclMkMyMzA0MDYlMkZSZW5lZ2FkZXMlMkZyZ2xlX3Ntb2tlXzAwMS5wbmclMkMyMjA1MjAlMkZSZW5lZ2FkZXMlMkZyZ2xnJTJGcmdsZ19QXzAwMS5wbmc"
+            }
+          />
+        </div>
+        <div className="mb-20">
+          <FeaturedProduct image="https://sg360.sungod.co/insecure/crop:1996:1996/resize:auto:800:800/extend:1:ce/aHR0cHM6Ly9zZzM2MC1zdGFjay5zdW5nb2QuY28vP3BhdGhzPTIzMDUwNCUyRklORU9TJTJGVnVsY2Fuc19URl9JTkVPUyUyMEdyZW5hZGllcnNfMDAxLnBuZw" />
+        </div>
+      </motion.section>
+    </div>
   );
 };
 

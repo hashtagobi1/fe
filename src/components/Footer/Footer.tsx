@@ -53,13 +53,13 @@ const Footer = (props: Props) => {
         <FooterCertifications link="https://www.datocms-assets.com/45158/1685008476-certified-b-corp.svg" />
         <FooterCertifications link="https://www.datocms-assets.com/45158/1685008507-kings-awards-2023.svg" />
       </ul>
-      <FooterLanguage />
       <ul className="flex">
         <FooterSocial url="https://www.facebook.com/sungodsunglasses" />
         <FooterSocial url="https://www.instagram.com/we_are_sungod" />
         <FooterSocial url="https://www.youtube.com/sungod" />
         <FooterSocial url="https://www.strava.com/clubs/sungod" />
       </ul>
+      <FooterLanguage />
       <ul className="flex">
         <FooterLegal text="cookies" />
         <FooterLegal text="privacy" />

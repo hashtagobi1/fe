@@ -21,7 +21,7 @@ const MobileMenu = (props: Props) => {
           {isOpen && (
             <div className="absolute top-0 bg-red-800 duration-500 transition-all z-30 left-0 w-screen h-screen flex items-center justify-center">
               <div className="text-black  text-4xl font-bold text-center">
-                <button className="text-white" onClick={() => setOpen(false)}>
+                <button className="text-white" onClick={() => setOpen(!open)}>
                   clear
                 </button>
                 Your Text Overlay
