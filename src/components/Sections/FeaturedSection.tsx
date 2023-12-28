@@ -1,21 +1,70 @@
-import React from "react";
-import FeaturedProduct from "./FeaturedProduct";
+"use client";
 
+import React, { useEffect, useRef } from "react";
+import FeaturedProduct from "./FeaturedProduct";
+import { useInView, motion } from "framer-motion";
 type Props = {
   headerText: string;
+  direction: "left" | "right";
 };
 
-const FeaturedSection = ({ headerText }: Props) => {
+const FeaturedSection = ({ headerText, direction }: Props) => {
+  const opacity = {
+    initial: {
+      opacity: 0,
+      x: direction === "left" ? "-100%" : "100%",
+    },
+    open: (i: number) => ({
+      opacity: 1,
+      x: "0%",
+      transition: {
+        type: "spring",
+        damping: 15, // Adjust the damping for elasticity
+        stiffness: 50, // Adjust the stiffness for elasticity
+        duration: 1.5,
+        delay: 0,
+        staggerChildren: 0.5,
+      },
+    }),
+    closed: (i: number) => ({
+      opacity: 0,
+      x: direction === "left" ? "-100%" : "100%",
+      transition: {
+        type: "spring",
+        damping: 15, // Adjust the damping for elasticity
+        stiffness: 100, // Adjust the stiffness for elasticity
+        duration: 1.5,
+        delay: 0,
+        staggerChildren: 0.5,
+      },
+    }),
+  };
+
+  const ref = useRef(null);
+  const isInView = useInView(ref);
+  useEffect(() => {
+    console.log("Element is in view: ", isInView);
+  }, [isInView]);
   return (
-    <section className="p-5 ">
+    <motion.section
+      variants={opacity}
+      animate={isInView ? "open" : "closed"}
+      ref={ref}
+      className="p-5 mt-20"
+      data-scroll
+    >
       <h2 className="text-2xl mt-10 font-semibold mb-10">{headerText}</h2>
       <div className="mb-20">
-        <FeaturedProduct />
+        <FeaturedProduct
+          image={
+            "https://sg360.sungod.co/insecure/crop:1996:1996/resize:auto:800:800/extend:1:ce/aHR0cHM6Ly9zZzM2MC1zdGFjay5zdW5nb2QuY28vP3BhdGhzPTIzMDQwNiUyRlJlbmVnYWRlcyUyRnJnZl9NYmxhY2tfMDAxLnBuZyUyQzIzMDQwNiUyRlJlbmVnYWRlcyUyRnJnaV9Cc2lsdmVyXzAwMS5wbmclMkMyMzA0MDYlMkZSZW5lZ2FkZXMlMkZyZ2xlX3Ntb2tlXzAwMS5wbmclMkMyMjA1MjAlMkZSZW5lZ2FkZXMlMkZyZ2xnJTJGcmdsZ19QXzAwMS5wbmc"
+          }
+        />
       </div>
       <div className="mb-20">
-        <FeaturedProduct />
+        <FeaturedProduct image="https://sg360.sungod.co/insecure/crop:1996:1996/resize:auto:800:800/extend:1:ce/aHR0cHM6Ly9zZzM2MC1zdGFjay5zdW5nb2QuY28vP3BhdGhzPTIzMDUwNCUyRklORU9TJTJGVnVsY2Fuc19URl9JTkVPUyUyMEdyZW5hZGllcnNfMDAxLnBuZw" />
       </div>
-    </section>
+    </motion.section>
   );
 };
 

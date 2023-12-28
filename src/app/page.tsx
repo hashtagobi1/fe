@@ -1,3 +1,4 @@
+import Mission from "@/components/Footer/Mission";
 import AnnouncementBar from "@/components/Header/AnnouncementBar";
 import Header from "@/components/Header/Header";
 import Hero from "@/components/Hero";
@@ -9,8 +10,9 @@ export default async function Home() {
       <AnnouncementBar test={"data2"} fetchedAnnouncements={"data"} />
       <Header />
       <Hero />
-      <FeaturedProducts headerText="Shop Best Sellers." />
-      <FeaturedProducts headerText="Popular Right Now." />
+      <FeaturedProducts direction="right" headerText="Shop Best Sellers." />
+      <FeaturedProducts direction="left" headerText="Popular Right Now." />
+      <Mission />
     </main>
   );
 }

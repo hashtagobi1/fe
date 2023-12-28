@@ -27,7 +27,7 @@ export default function RootLayout({
         {/* <ReactLenis root> */}
         {children}
         {/* </ReactLenis> */}
-        {/* <Footer /> */}
+        <Footer />
       </body>
     </html>
   );
