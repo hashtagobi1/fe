@@ -168,8 +168,8 @@ const FooterLanguage = (props: Props) => {
                   value={{ label: selectedCountry, value: selectedCountry }}
                   options={countryOptions}
                   onChange={(option) => {
-                    setSelectedCountry(option.value);
-                    const code = getCountryCode(option.value);
+                    setSelectedCountry(option ? option.value : "");
+                    const code = option ? getCountryCode(option.value) : "";
                     const language = code
                       ? languages[getCountryData(code).languages[0]].name
                       : "";
