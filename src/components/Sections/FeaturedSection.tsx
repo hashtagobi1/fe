@@ -51,10 +51,12 @@ const FeaturedSection = ({ headerText, direction }: Props) => {
         variants={opacity}
         animate={isInView ? "open" : "closed"}
         ref={ref}
-        className="p-5 mt-20 flex items-center justify-center flex-col "
+        className="sectionContainer  "
         data-scroll
       >
-        <h2 className="text-2xl md:text-4xl mt-10  font-semibold mb-10">{headerText}</h2>
+        <h2 className="text-2xl  md:text-4xl mt-10  font-semibold mb-10">
+          {headerText}
+        </h2>
         <div className="flex flex-col md:flex-row gap-6">
           <div className="mb-20">
             <FeaturedProduct

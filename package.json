@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@sanity/client": "^6.10.0",
+    "@sanity/image-url": "^1.0.2",
     "countries-list": "^3.0.6",
     "framer-motion": "^10.16.16",
     "hamburger-react": "^2.5.0",
