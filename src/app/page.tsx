@@ -14,6 +14,7 @@ export default function Home() {
       <Header />
       <Hero />
       <div className="flex gap-14 items-center bg-gray-100 justify-between">
+        {/* <ModelComponent /> */}
         <GlassesModel />
         <ModelDescription />
       </div>

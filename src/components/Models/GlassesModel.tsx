@@ -36,7 +36,7 @@ const GlassesModel = (props: Props) => {
   }
 
   const ref = useRef<THREE.Group>(null);
-  const { nodes, materials } = useLoader(GLTFLoader, url);
+  const { nodes, materials } = useLoader(GLTFLoader, "/models/scene.gltf");
 
   return (
     <div className="md:w-[50vw] h-[75vh] w-[40vw] border border-black">
