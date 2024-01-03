@@ -2,7 +2,7 @@ import React from "react";
 
 type Props = {};
 
-const RightArrow = (props: Props) => {
+const RightChevron = (props: Props) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -10,8 +10,8 @@ const RightArrow = (props: Props) => {
       viewBox="0 0 24 24"
       strokeWidth={1.5}
       stroke="currentColor"
-      width={18}
       height={18}
+      width={18}
     >
       <path
         strokeLinecap="round"
@@ -22,4 +22,4 @@ const RightArrow = (props: Props) => {
   );
 };
 
-export default RightArrow;
+export default RightChevron;

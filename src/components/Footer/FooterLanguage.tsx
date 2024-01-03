@@ -20,7 +20,7 @@ import {
   getCountryDataList,
   getEmojiFlag,
 } from "countries-list";
-import RightArrow from "@/SVGs/RightArrow";
+import RightArrow from "@/SVGs/RightChevron";
 import Select from "react-select";
 import XMark from "@/SVGs/XMark";
 
@@ -87,7 +87,6 @@ const FooterLanguage = (props: Props) => {
 
   const handleChange = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
     e.preventDefault();
-    console.log({ e });
     setOpen(false);
   };
 

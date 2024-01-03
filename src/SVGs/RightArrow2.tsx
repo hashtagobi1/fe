@@ -2,11 +2,11 @@ import React from "react";
 
 type Props = {
   classes?: string;
+  handleClick(i: number): void;
   galleryLength: number;
-  handleClick: (galleryLength: number) => void;
 };
 
-const LeftArrow = ({ classes, galleryLength, handleClick }: Props) => {
+const RightArrow2 = ({ classes, galleryLength, handleClick }: Props) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -22,10 +22,10 @@ const LeftArrow = ({ classes, galleryLength, handleClick }: Props) => {
       <path
         strokeLinecap="round"
         strokeLinejoin="round"
-        d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18"
+        d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
       />
     </svg>
   );
 };
 
-export default LeftArrow;
+export default RightArrow2;
