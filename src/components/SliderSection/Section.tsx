@@ -1,7 +1,7 @@
 import { client } from "@/utils/sanity/client";
 import React from "react";
 import SliderSections from ".";
-import type { SliderSection } from "../../../../sungod-be/schema";
+import type { SliderSection } from "../../../schema"
 
 const Section = async () => {
   const sliderSections = await client.fetch<SliderSection[]>(

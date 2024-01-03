@@ -13,7 +13,7 @@ import imageBuilder from "@/utils/sanity/imageBuilder";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { Navigation } from "swiper/modules";
-import type { SliderSection } from "../../../../sungod-be/schema";
+import type { SliderSection } from "../../../schema";
 import { useState } from "react";
 
 type Props = {
