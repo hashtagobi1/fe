@@ -31,7 +31,6 @@ const FeaturedProduct = ({ image }: Props) => {
         <Link className="" passHref href={"/"}>
           <div className="bg-gray-100 overflow-hidden rounded-lg flex items-center justify-center">
             <div className="transform scale-100 transition-transform hover:scale-110 duration-300 ease-in-out">
-              {/* // TODO: make this come from CMS  */}
               <Image
                 width={500}
                 src={image}

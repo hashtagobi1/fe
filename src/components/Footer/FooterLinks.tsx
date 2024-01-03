@@ -7,7 +7,7 @@ type Props = {
 
 const FooterLinks = ({ links, linkTitle }: Props) => {
   return (
-    <div className="mt-10 flex flex-col gap-4  mb-6">
+    <div className="mt-10 md:mt-0 flex flex-col gap-4  mb-6">
       <div className="">
         <div className="">
           <p className=" font-light  text-brandPurple uppercase">{linkTitle}</p>

@@ -2,11 +2,17 @@ import React from "react";
 
 type Props = {
   classes?: string;
-  handleClick(i: number): void;
-  galleryLength: number;
+  handleClick?(i: number): void;
+  galleryLength?: number;
+  size?: number;
 };
 
-const RightArrow2 = ({ classes, galleryLength, handleClick }: Props) => {
+const RightArrow2 = ({
+  classes,
+  galleryLength,
+  handleClick,
+  size = 36,
+}: Props) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -14,9 +20,9 @@ const RightArrow2 = ({ classes, galleryLength, handleClick }: Props) => {
       viewBox="0 0 24 24"
       strokeWidth={1.5}
       stroke="currentColor"
-      width={36}
-      height={36}
-      onClick={() => handleClick(galleryLength)}
+      width={45}
+      height={45}
+      onClick={() => handleClick && galleryLength && handleClick(galleryLength)}
       className={`cursor-pointer ${classes}`}
     >
       <path
