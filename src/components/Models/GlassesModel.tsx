@@ -20,6 +20,9 @@ type ContextType = Record<
   string,
   React.ForwardRefExoticComponent<JSX.IntrinsicElements["mesh"]>
 >;
+
+  const url ="/models/scene.gltf"
+
 const GlassesModel = (props: Props) => {
   function Controls() {
     const {
@@ -29,8 +32,9 @@ const GlassesModel = (props: Props) => {
     return <OrbitControls args={[camera, domElement]} />;
   }
 
+  const url ="/models/scene.gltf"
   const ref = useRef<THREE.Group>(null);
-  const { nodes, materials } = useGLTF("/3DModels/scene.gltf") as GLTFResult;
+  const { nodes, materials } = useGLTF(url) as GLTFResult;
 
   return (
     <div className="md:w-[50vw] h-[75vh] w-[40vw] border border-black">
@@ -61,6 +65,7 @@ const GlassesModel = (props: Props) => {
   );
 };
 
-useGLTF.preload("/3DModels/scene.gltf");
+
+useGLTF.preload(url);
 
 export default GlassesModel;
