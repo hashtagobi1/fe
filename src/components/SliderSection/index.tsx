@@ -26,7 +26,7 @@ const SliderSections = ({ sliderSections }: Props) => {
   return (
     <div className="sectionContainer">
       {sliderSections.map((section, i) => (
-        <>
+        <div key={section._id}>
           <div className="flex items-center justify-between p-6 w-full">
             <h2 className="text-2xl  md:text-4xl mt-10 font-semibold mb-10">
               Shop By: {section.title}.
@@ -86,7 +86,7 @@ const SliderSections = ({ sliderSections }: Props) => {
               </SwiperSlide>
             ))}
           </Swiper>
-        </>
+        </div>
       ))}
     </div>
   );

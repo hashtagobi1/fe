@@ -1,9 +1,12 @@
 "use client";
 
 import { OrbitControls, Text, useGLTF } from "@react-three/drei";
-import { Canvas, useThree } from "@react-three/fiber";
+import { Canvas, useLoader, useThree } from "@react-three/fiber";
 import { useRef } from "react";
 import { GLTF } from "three-stdlib";
+
+import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
+
 type Props = {};
 
 type GLTFResult = GLTF & {
@@ -21,7 +24,7 @@ type ContextType = Record<
   React.ForwardRefExoticComponent<JSX.IntrinsicElements["mesh"]>
 >;
 
-  const url ="/models/scene.gltf"
+const url = "/models/scene.gltf";
 
 const GlassesModel = (props: Props) => {
   function Controls() {
@@ -32,9 +35,8 @@ const GlassesModel = (props: Props) => {
     return <OrbitControls args={[camera, domElement]} />;
   }
 
-  const url ="/models/scene.gltf"
   const ref = useRef<THREE.Group>(null);
-  const { nodes, materials } = useGLTF(url) as GLTFResult;
+  const { nodes, materials } = useLoader(GLTFLoader, url);
 
   return (
     <div className="md:w-[50vw] h-[75vh] w-[40vw] border border-black">
@@ -48,6 +50,7 @@ const GlassesModel = (props: Props) => {
           <group rotation={[-Math.PI / 2, 0, 0]} scale={0.3}>
             <group rotation={[Math.PI / 2, 0, 0]}>
               <mesh
+                //   @ts-ignore
                 geometry={nodes.ModSpyTron_MatSpyTron_0.geometry}
                 material={materials.MatSpyTron}
                 rotation={[-Math.PI / 2, 0, 0]}
@@ -65,7 +68,6 @@ const GlassesModel = (props: Props) => {
   );
 };
 
-
-useGLTF.preload(url);
+// useGLTF.preload(scene);
 
 export default GlassesModel;
