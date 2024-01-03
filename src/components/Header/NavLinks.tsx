@@ -29,7 +29,7 @@ const NavLinks = (props: Props) => {
     );
   };
   return (
-    <div className="flex flex-col w-full  pt-2 justify-between">
+    <div className="flex flex-col w-full pt-2 justify-between">
       <ol className="flex md:flex-row flex-col gap-6 font-semibold text-black">
         {renderNavLink("Shop All")}
         {renderNavLink("Sunglasses")}

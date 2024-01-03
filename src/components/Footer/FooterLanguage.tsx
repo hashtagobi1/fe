@@ -81,9 +81,7 @@ const FooterLanguage = (props: Props) => {
     },
   };
 
-  const backdropStyle = open
-    ? "fixed inset-0 bg-black opacity-85 z-50"
-    : "hidden";
+  const backdropStyle = open ? "fixed bg-gray-700  inset-0 z-50" : "hidden";
 
   const handleChange = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
     e.preventDefault();
@@ -118,7 +116,7 @@ const FooterLanguage = (props: Props) => {
               animate={open ? "visible" : "hidden"}
               exit={"exit"}
               variants={slideVariants}
-              className={`  flex-col fixed top-0 right-0 w-4/6 h-full 
+              className={` opacity-100 flex-col fixed top-0 right-0 w-4/6 h-full 
             bg-white
             flex p-8
             z-50 overflow-hidden ${open ? "block" : "hidden"}`}
