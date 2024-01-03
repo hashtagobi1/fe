@@ -8,11 +8,11 @@ import FooterLanguage from "./FooterLanguage";
 
 const Footer = () => {
   return (
-    <footer className="p-5 md:pt-20">
+    <footer className="p-5 md:pt-20 md:md:px-32">
       <div
         className="font-light 
       
-      md:flex m md:justify-around md:w-full max-w-full md:px-24 md:gap-12 mb-20
+      md:flex m md:justify-around md:w-full max-w-full  md:gap-12 mb-20
       "
       >
         <div className="flex flex-col">
