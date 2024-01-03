@@ -63,8 +63,8 @@ const SliderSections = ({ sliderSections }: Props) => {
                       className=" hover:cursor-pointer overflow-hidden relative "
                     >
                       <Image
-                        width={"600"}
-                        height={"600"}
+                        width={"500"}
+                        height={"500"}
                         className="rounded-lg 
                         hover:scale-110 scale-100 hover:blur-[0.4px]
                         bg-gradient-to-br from-purple-900 to-blue-500
@@ -72,8 +72,8 @@ const SliderSections = ({ sliderSections }: Props) => {
                         filter hover:brightness-50 brightness-75 transition-all
                         select-none object-cover w-full"
                         src={imageBuilder(item.image)
-                          .height(600)
-                          .height(600)
+                          .height(500)
+                          .height(500)
                           .url()}
                         alt={item.title ?? "slider image"}
                       />

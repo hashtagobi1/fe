@@ -1,0 +1,11 @@
+Model Information:
+* title:	Glasses Spy tron 2 - Gafas PBR
+* source:	https://sketchfab.com/3d-models/glasses-spy-tron-2-gafas-pbr-1a29942363754f798ac2dd9e61d857fc
+* author:	ArnoldE (https://sketchfab.com/arnoldescorcia906)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Glasses Spy tron 2 - Gafas PBR" (https://sketchfab.com/3d-models/glasses-spy-tron-2-gafas-pbr-1a29942363754f798ac2dd9e61d857fc) by ArnoldE (https://sketchfab.com/arnoldescorcia906) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

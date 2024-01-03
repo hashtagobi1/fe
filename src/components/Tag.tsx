@@ -8,7 +8,9 @@ type Props = {
 const Tag = ({ name, styles }: Props) => {
   return (
     <span
-      className={`text-sm ${styles}  uppercase font-bold border py-1 px-2 rounded-lg bg-clip-text text-transparent bg-gradient-to-r from-brandPurple  to to-brandBlue`}
+      className={`text-sm ${styles}  uppercase font-bold
+      border py-1 px-2 rounded-lg 
+      bg-clip-text text-transparent bg-gradient-to-r from-brandPurple  to to-brandBlue`}
     >
       {name}
     </span>

@@ -9,8 +9,11 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@react-three/drei": "^9.92.7",
+    "@react-three/fiber": "^8.15.13",
     "@sanity/client": "^6.10.0",
     "@sanity/image-url": "^1.0.2",
+    "@types/three": "^0.160.0",
     "countries-list": "^3.0.6",
     "framer-motion": "^10.17.0",
     "hamburger-react": "^2.5.0",
@@ -21,7 +24,8 @@
     "react-dom": "^18",
     "react-select": "^5.8.0",
     "react-social-icons": "^6.7.0",
-    "swiper": "^11.0.5"
+    "swiper": "^11.0.5",
+    "three": "^0.160.0"
   },
   "devDependencies": {
     "@types/locomotive-scroll": "^4.1.3",
