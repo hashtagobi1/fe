@@ -10,7 +10,7 @@ type Props = {};
 const Header = (props: Props) => {
   return (
     <header className=" text items-center justify-between">
-      <div className="md:flex hidden items-center py-8 px-20  justify-between">
+      <div className="md:flex hidden items-center py-8 px-16 md:px-10 justify-between">
         <div className="flex items-center justify-between">
           <Logo size={125} />
           <NavSection />
